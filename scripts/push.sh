@@ -16,7 +16,7 @@ TARGET_DIRECTORY=""
 if [ -n "${API_TOKEN_GITHUB:=}" ]
 then
 	echo "[+] Using API_TOKEN_GITHUB"
-	GIT_CMD_REPOSITORY="https://$DESTINATION_REPOSITORY_USERNAME:$API_TOKEN_GITHUB@$GITHUB_SERVER/$DESTINATION_REPOSITORY_USERNAME/$DESTINATION_REPOSITORY_NAME.git"
+	GIT_CMD_REPOSITORY="https://Bingsu-kun:$API_TOKEN_GITHUB@github.com/Bingsu-kun/bingsu-kun.github.io.git"
 else
 	echo "::error::API_TOKEN_GITHUB and SSH_DEPLOY_KEY are empty. Please fill one (recommended the SSH_DEPLOY_KEY)"
 	exit 1
@@ -91,4 +91,5 @@ echo "[+] git diff-index:"
 git diff-index --quiet HEAD || git commit --message "$COMMIT_MESSAGE"
 
 echo "[+] Pushing git commit"
+echo "$API_TOKEN_GITHUB"
 git push "$GIT_CMD_REPOSITORY" --set-upstream "$TARGET_BRANCH"
