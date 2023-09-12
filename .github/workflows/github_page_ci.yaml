@@ -14,8 +14,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci /home/runner/work/personal-blog/personal-blog/Front
-      - run: npm --prefix /Front run build
+      - name: install dependencies
+        working-directory: ./Front
+        run: npm ci
+      - name: build
+        working-directory: ./Front
+        run: npm run build
 
 
   push:
