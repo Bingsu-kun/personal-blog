@@ -1,0 +1,28 @@
+name: Github_Page_CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: build react app
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
+        run: npm ci
+        run: npm build 
+      - name: Pushes to Github repository
+        uses: Bingsu-kun/github-page-ci-for-react@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          destination-github-username: 'Bingsu-kun'
+          user-email: icetime963@gmail.com
+          user-name: Hephai
