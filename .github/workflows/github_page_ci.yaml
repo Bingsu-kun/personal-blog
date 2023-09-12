@@ -10,13 +10,17 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: build react app
+      - name: cache react app
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: subdir/package-lock.json
         run: npm ci
+      - name: build react app
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
         run: npm build 
       - name: Pushes to Github repository
         uses: Bingsu-kun/github-page-ci-for-react@main
