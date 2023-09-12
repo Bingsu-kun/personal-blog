@@ -22,15 +22,8 @@ jobs:
       - name: build
         working-directory: ./Front
         run: npm run build
-
-
-  push:
-    name: Push to Github Page repo
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - name: Pushes to Github repository
         run: sh /home/runner/work/personal-blog/personal-blog/scripts/push.sh
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      
