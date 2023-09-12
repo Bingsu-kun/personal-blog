@@ -5,104 +5,22 @@ on:
     branches: [ main ]
 
 jobs:
-  caching:
-    name: Caching
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Cache node modules
-      uses: actions/cache@v3
-      env:
-        cache-name: cache-node-modules
-      with:
-        # npm cache files are stored in `~/.npm` on Linux/macOS
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
-
-    - name: Install Dependencies
-      working-directory: ./Front
-      run: npm ci
-
-    - name: Build
-      working-directory: ./Front
-      run: npm build
-
-  install_dependencies:
-    name: Install Dependencies
-    needs: caching
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        - with:
-            node-version: 18
-
-      - name: Compute dependency cache key
-        id: compute_lockfile_hash
-        run: echo "::set-output name=hash::${{ hashFiles('package-lock.json') }}"
-
-      - name: Check dependency cache
-        uses: actions/cache@v3
-        id: cache_dependencies
-        with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ steps.compute_lockfile_hash.outputs.hash }}
-
-      - name: Install dependencies
-        working-directory: ./Front
-        # use '.', not '[]' with hyphenated variables
-        # https://github.com/nektos/act/issues/104#issuecomment-592892249
-        if: steps.cache_dependencies.outputs.cache-hit == ''
-        run: npm install
-
-    outputs:
-      dependency_cache_key: ${{ steps.compute_lockfile_hash.outputs.hash }}
-
-
   build:
     name: Build
-    needs: install_dependencies
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        - with:
-            node-version: 18
-
-      - name: Check dependency cache
-        uses: actions/cache@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.install_dependencies.outputs.dependency_cache_key }}
-
-      - name: Check build cache
-        uses: actions/cache@v3
-        id: cache_built_packages
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
-
-      - name: Build packages
+          node-version: 18
+          cache: npm
+      - name: install dependencies
         working-directory: ./Front
-        if: steps.cache_built_packages.outputs.cache-hit == ''
+        run: npm ci
+      - name: build
+        working-directory: ./Front
         run: npm run build
-
-    outputs:
-      dependency_cache_key: ${{ needs.install_dependencies.outputs.dependency_cache_key }}
 
 
   push:
