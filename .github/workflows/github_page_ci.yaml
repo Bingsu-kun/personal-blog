@@ -30,10 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pushes to Github repository
-        uses: Bingsu-kun/github-page-ci-for-react@main
+        run: sh ../scripts/push.sh
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          destination-github-username: 'Bingsu-kun'
-          user-email: icetime963@gmail.com
-          user-name: Hephai
