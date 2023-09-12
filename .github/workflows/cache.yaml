@@ -26,7 +26,7 @@ jobs:
           ${{ runner.os }}-
 
     - name: Install Dependencies
-      run: npm install /Front/package.json
+      run: npm install /home/runner/work/personal-blog/Front
 
     - name: Build
       run: npm --prefix /Front run build
