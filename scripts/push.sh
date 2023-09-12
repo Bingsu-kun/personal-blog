@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Github Page CI Action start"
-BUILD_DIRECTORY="build"
+BUILD_DIRECTORY="Front/build"
 DESTINATION_GITHUB_USERNAME="Bingsu-kun"
 DESTINATION_REPOSITORY_NAME="bingsu-kun.github.io"
 USER_EMAIL="icetime963@gmail.com"
