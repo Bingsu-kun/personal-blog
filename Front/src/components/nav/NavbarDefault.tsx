@@ -30,7 +30,7 @@ function NavbarDefault() {
 
       <div>
         <button className="font-jakarta text-sm px-4 py-2 rounded-full text-white font-medium bg-white bg-opacity-[.08] border border-white border-opacity-[.08] hover:border-opacity-25">
-          Log in
+          Profile
         </button>
       </div>
     </nav>
