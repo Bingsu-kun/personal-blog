@@ -37,12 +37,12 @@ function NavbarFixed() {
         </li>
         <li>
           <a href="#" className="p-4 hover:opacity-50">
-            Features
+            Category
           </a>
         </li>
         <li>
           <a href="#" className="p-4 hover:opacity-50">
-            Pricing
+            Profile
           </a>
         </li>
         <li>
@@ -52,7 +52,7 @@ function NavbarFixed() {
         </li>
         <li>
           <button className="font-jakarta text-sm px-4 py-2 rounded-3xl text-white font-medium bg-[#171719] border border-white border-opacity-[.08] hover:border-opacity-25">
-            Profile
+            Search
           </button>
         </li>
       </ul>
