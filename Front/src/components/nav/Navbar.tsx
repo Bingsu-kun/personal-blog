@@ -10,10 +10,8 @@ function Navbar() {
   const handleScroll = () => {
     if (window.scrollY >= 400) {
       setIsScrollPast(true);
-      console.log("Scrolled Past");
     } else {
       setIsScrollPast(false);
-      console.log("Not Past");
     }
   };
 
