@@ -13,12 +13,7 @@ function NavbarDefault() {
         </li>
         <li>
           <a href="" className="p-3 hover:text-white">
-            Category
-          </a>
-        </li>
-        <li>
-          <a href="" className="p-3 hover:text-white">
-            Profile
+            Search
           </a>
         </li>
         <li>
@@ -30,7 +25,7 @@ function NavbarDefault() {
 
       <div>
         <button className="font-jakarta text-sm px-4 py-2 rounded-full text-white font-medium bg-white bg-opacity-[.08] border border-white border-opacity-[.08] hover:border-opacity-25">
-          Search
+          Profile
         </button>
       </div>
     </nav>
