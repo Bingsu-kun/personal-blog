@@ -1,3 +1,4 @@
+import Block from "./components/body/Bodyblock";
 import Navbar from "./components/nav/Navbar";
 
 function App() {
@@ -6,7 +7,13 @@ function App() {
       <div id="App-header">
         <Navbar />
       </div>
-      <div id="App-body"></div>
+      <div id="App-body" className="grid grid-cols-[20%_60%_20%]">
+        <div id="App-body-left"></div>
+        <div id="App-body-center">
+          <Block blockId="1" />
+        </div>
+        <div id="App-body-right"></div>
+      </div>
       <div id="App-footer"></div>
     </>
   );
