@@ -1,6 +1,6 @@
 function NavbarDefault() {
   return (
-    <nav className="flex justify-between items-center px-10 py-5">
+    <nav className="flex shadow-xl justify-between items-center px-10 py-5">
       <div>
         <h2 className="text-xl text-white font-semibold">HEPHAI</h2>
       </div>

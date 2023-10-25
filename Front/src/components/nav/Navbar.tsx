@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import NavbarDefault from "./NavbarDefault";
 import NavbarFixed from "./NavbarFixed";
@@ -8,7 +8,7 @@ function Navbar() {
   const [isScrollPast, setIsScrollPast] = useState<boolean>(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 100) {
       setIsScrollPast(true);
     } else {
       setIsScrollPast(false);
