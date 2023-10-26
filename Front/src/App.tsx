@@ -11,6 +11,7 @@ function App() {
         <div id="App-body-left"></div>
         <div id="App-body-center">
           <Block blockId="1" />
+          <Block blockId="2" />
         </div>
         <div id="App-body-right"></div>
       </div>
