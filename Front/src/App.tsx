@@ -1,8 +1,10 @@
+import ReactDOM from "react-dom";
 import Block from "./components/body/Bodyblock";
 import Navbar from "./components/nav/Navbar";
 
 function App() {
-  return (
+  const root: HTMLElement = document.getElementById("root")!;
+  const init = (
     <>
       <div id="App-header">
         <Navbar />
@@ -18,6 +20,7 @@ function App() {
       <div id="App-footer"></div>
     </>
   );
+  ReactDOM.render(init, root);
 }
 
 export default App;
