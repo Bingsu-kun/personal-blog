@@ -5,7 +5,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --light-bg: #eceff1;
+    --dark-bg: #1a1e2d;
+    --light-block-bg: #607d8b;
+    --dark-block-bg: #262f4d;
+  }
+
   body {
-    @apply bg-[#1a1e2d] h-[300vh];
+    @apply bg-[var(--dark-bg)] h-[300vh];
+    color: whitesmoke;
   }
 }

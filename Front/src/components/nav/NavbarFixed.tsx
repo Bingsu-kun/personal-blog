@@ -27,7 +27,7 @@ function NavbarFixed() {
       animate="animate"
       exit="exit"
       variants={navVariants}
-      className="fixed z-[999] top-4 left-1/2 -translate-x-1/2 rounded-full p-1 bg-white bg-opacity-[.08] backdrop-blur-lg border border-white border-opacity-[.08]"
+      className="fixed z-[999] shadow-xl top-4 left-1/2 -translate-x-1/2 rounded-full p-1 bg-white bg-opacity-[.08] backdrop-blur-lg border border-white border-opacity-[.08]"
     >
       <ul className="flex items-center gap-2 text-sm font-medium font-jakarta text-white">
         <li>
