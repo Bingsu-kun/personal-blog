@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Github Page CI Action start"
-BUILD_DIRECTORY="Front/dist"
+BUILD_DIRECTORY="dist"
 DESTINATION_GITHUB_USERNAME="Bingsu-kun"
 DESTINATION_REPOSITORY_NAME="bingsu-kun.github.io"
 USER_EMAIL="icetime963@gmail.com"
-USER_NAME="hephai"
+USER_NAME="isaac"
 DESTINATION_REPOSITORY_USERNAME="Bingsu-kun"
 TARGET_BRANCH="master"
 COMMIT_MESSAGE="Updated by Github Action"
