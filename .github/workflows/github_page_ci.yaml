@@ -2,7 +2,7 @@ name: Github Page CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -15,13 +15,10 @@ jobs:
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: /home/runner/work/personal-blog/personal-blog/Front
+          cache-dependency-path: /home/runner/work/personal-blog-client/personal-blog-client
       - name: install dependencies
-        working-directory: ./Front
         run: npm ci
       - name: build
-        working-directory: ./Front
         run: npm run build
       - name: Pushes to Github repository
-        run: API_TOKEN_GITHUB=${{secrets.API_TOKEN_GITHUB}} sh /home/runner/work/personal-blog/personal-blog/scripts/push.sh
-      
+        run: API_TOKEN_GITHUB=${{secrets.API_TOKEN_GITHUB}} sh /home/runner/work/personal-blog-client/personal-blog-client/scripts/push.sh
