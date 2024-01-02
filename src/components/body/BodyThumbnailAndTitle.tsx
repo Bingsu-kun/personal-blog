@@ -1,9 +1,7 @@
 function BodyThumbnailAndTitle() {
   return (
     <div className="flex justify-center items-center">
-      <div className="flex justify-center items-center shadow-xl rounded-xl w-full h-20 bg-[url(assets/image-placeholder.png)] bg-cover">
-        <p>임시용</p>
-      </div>
+      <h2>임시용</h2>
     </div>
   );
 }

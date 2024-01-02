@@ -8,12 +8,23 @@
   :root {
     --light-bg: #eceff1;
     --dark-bg: #1a1e2d;
+    --middle-gradient: #0d193c;
+    --end-gradient: #430940;
     --light-block-bg: #607d8b;
     --dark-block-bg: #262f4d;
+    font-family: "Pretendard-Regular";
   }
 
   body {
-    @apply bg-[var(--dark-bg)] h-[300vh];
+    @apply bg-gradient-to-tr from-[var(--dark-bg)] from-80% via-[var(--middle-gradient)] via-85% to-[var(--end-gradient)] to-95% h-[300vh];
     color: whitesmoke;
   }
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }

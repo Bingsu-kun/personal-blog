@@ -2,7 +2,7 @@ function NavbarDefault() {
   return (
     <nav className="flex shadow-xl justify-between items-center px-10 py-5">
       <div>
-        <h2 className="text-xl text-white font-semibold">Isaac.Docs</h2>
+        <h2 className="text-xl text-white font-semibold">Isaac.docs()</h2>
       </div>
 
       <ul className="flex items-center gap-2 text-[#bdbdc0] font-medium font-jakarta">
