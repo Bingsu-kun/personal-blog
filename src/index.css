@@ -6,17 +6,16 @@
 
 @layer base {
   :root {
-    --light-bg: #eceff1;
-    --dark-bg: #1a1e2d;
-    --middle-gradient: #0d193c;
-    --end-gradient: #430940;
+    --bg-start: #D45424;
+    --bg-middle: #BB2A57;
+    --bg-end: #19105C;
     --light-block-bg: #607d8b;
     --dark-block-bg: #262f4d;
     font-family: "Pretendard-Regular";
   }
 
   body {
-    @apply bg-gradient-to-tr from-[var(--dark-bg)] from-80% via-[var(--middle-gradient)] via-85% to-[var(--end-gradient)] to-95% h-[300vh];
+    @apply bg-gradient-to-tr from-[var(--bg-start)] via-[var(--bg-middle)] to-[var(--bg-end)] h-[100vh];
     color: whitesmoke;
   }
 }
