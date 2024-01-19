@@ -1,7 +1,7 @@
 import Home from "./home/home";
 import Sorry from "./sorry";
 
-const inConstruction = true
+const inConstruction = false
 
 const App = () => {
   return inConstruction ? (

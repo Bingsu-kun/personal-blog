@@ -1,16 +1,17 @@
+import Profile from "./profile";
+import Intro from "./intro";
+
 const Home = () => {
   return (
     <>
-      <div id="App-header">
-        hello
-      </div>
-      <div id="App-body" className="grid grid-cols-[25%_50%_25%]">
-        <div id="App-body-left"></div>
-        <div id="App-body-center">
+      <div id="Home-body" className="grid grid-cols-[30%_70%]">
+        <div id="Home-body-profile">
+            <Profile/>
         </div>
-        <div id="App-body-right"></div>
+        <div id="Home-body-intro">
+            <Intro/>
+        </div>
       </div>
-      <div id="App-footer"></div>
     </>
   );
 }
