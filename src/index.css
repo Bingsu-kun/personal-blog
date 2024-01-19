@@ -15,7 +15,7 @@
   }
 
   body {
-    @apply bg-gradient-to-tr from-[var(--bg-start)] via-[var(--bg-middle)] to-[var(--bg-end)] h-[100vh];
+    @apply bg-gradient-to-tr from-[var(--bg-start)] via-[var(--bg-middle)] to-[var(--bg-end)] h-screen;
     color: whitesmoke;
   }
 }

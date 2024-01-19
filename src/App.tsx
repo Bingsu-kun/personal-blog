@@ -1,10 +1,17 @@
 import Home from "./home/home";
 import Blog from "./blog/blog";
+import Sorry from "./sorry";
 
-function App() {
-  return (
+const inConstruction = true
+
+const App = () => {
+  return inConstruction ? (
     <>
-      <Home />
+      <Sorry/>
+    </>
+  ) : (
+    <>
+      <Home/>
     </>
   );
 }
