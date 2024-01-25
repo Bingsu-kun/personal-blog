@@ -7,23 +7,25 @@ import 'swiper/css/pagination';
 import { Mousewheel, Pagination } from 'swiper/modules';
 
 const Intro = () => {
+    const ssClassNames = 'flex text-center justify-center items-center p-14'
     return (
         <>
             <Swiper
                 direction={'vertical'}
                 slidesPerView={1}
-                spaceBetween={30}
+                spaceBetween={10}
+                speed={1500}
                 mousewheel={true}
                 pagination={{
-                clickable: true,
+                    clickable: true,
                 }}
                 modules={[Mousewheel, Pagination]}
-                className="w-full h-full"
+                className="w-full h-screen"
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide className={ssClassNames}><div>Slide 1</div></SwiperSlide>
+                <SwiperSlide className={ssClassNames}>Slide 2</SwiperSlide>
+                <SwiperSlide className={ssClassNames}>Slide 3</SwiperSlide>
+                <SwiperSlide className={ssClassNames}>Slide 4</SwiperSlide>
             </Swiper>
         </>
     )
