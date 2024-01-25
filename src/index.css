@@ -11,6 +11,9 @@
     --bg-end: #19105C;
     --light-block-bg: #607d8b;
     --dark-block-bg: #262f4d;
+    --swiper-pagination-right: auto;
+    --swiper-pagination-left: 8px;
+    --swiper-pagination-color: white;
     font-family: "Pretendard-Regular";
   }
 
@@ -26,11 +29,4 @@
     format("woff");
   font-weight: 400;
   font-style: normal;
-}
-
-.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
-  right: var(--swiper-pagination-right, auto);
-  left: var(--swiper-pagination-left, 8px);
-  top: 50%;
-  transform: translate3d(0px, -50%, 0);
 }
