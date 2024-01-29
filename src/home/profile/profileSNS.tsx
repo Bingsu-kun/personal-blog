@@ -5,19 +5,19 @@ const ProfileSNS = () => {
   return (
     <div className="flex justify-center items-center m-3">
       <ImgButtonComponent
-        imgSource="/assets/github.png"
+        imgSource="/assets/SNS/github.png"
         imgLink="https://github.com/Bingsu-kun"
         classNameStr={classNameStr}
         isHover={true}
       />
       <ImgButtonComponent
-        imgSource="/assets/instagram.png"
+        imgSource="/assets/SNS/instagram.png"
         imgLink="https://www.instagram.com/isaac._.jh/"
         classNameStr={classNameStr}
         isHover={true}
       />
       <ImgButtonComponent
-        imgSource="/assets/mail.png"
+        imgSource="/assets/SNS/mail.png"
         imgLink=""
         classNameStr={classNameStr}
         isHover={true}
