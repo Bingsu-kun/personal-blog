@@ -1,5 +1,4 @@
 import Home from "./home/home";
-import Blog from "./blog/blog";
 import Sorry from "./sorry";
 
 const inConstruction = true
