@@ -9,7 +9,7 @@ const Profile = () => {
     >
       <ProfileImage />
       <p className="text-3xl">Janghun Lee (Isaac)</p>
-      <p className="text-xl">@Bingsu-kun 🇰🇷</p>
+      <p className="text-xl">@isaac-jh 🇰🇷</p>
       <br />
       <p className="text-2xl">Backend-engineer</p>
       <p>

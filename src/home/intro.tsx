@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { Mousewheel, Pagination } from 'swiper/modules';
+import Description from './sections/description';
 
 const Intro = () => {
     const ssClassNames = 'flex text-center justify-center items-center p-14'
@@ -22,7 +23,9 @@ const Intro = () => {
                 modules={[Mousewheel, Pagination]}
                 className="w-full h-screen"
             >
-                <SwiperSlide className={ssClassNames}><div>Slide 1</div></SwiperSlide>
+                <SwiperSlide className={ssClassNames}>
+                    <Description/>
+                </SwiperSlide>
                 <SwiperSlide className={ssClassNames}>Slide 2</SwiperSlide>
                 <SwiperSlide className={ssClassNames}>Slide 3</SwiperSlide>
                 <SwiperSlide className={ssClassNames}>Slide 4</SwiperSlide>
