@@ -6,20 +6,18 @@
 
 @layer base {
   :root {
-    --bg-start: #D45424;
-    --bg-middle: #BB2A57;
-    --bg-end: #19105C;
-    --light-block-bg: #607d8b;
-    --dark-block-bg: #262f4d;
+    --bg-default: #FFEDDB;
+    --light-block-bg: #EDCDBB;
+    --dark-block-bg: #E3B7A0;
     --swiper-pagination-right: auto;
     --swiper-pagination-left: 8px;
-    --swiper-pagination-color: white;
+    --swiper-pagination-color: #BF9270;
     font-family: "Pretendard-Regular";
   }
 
   body {
-    @apply bg-gradient-to-tr from-[var(--bg-start)] via-[var(--bg-middle)] to-[var(--bg-end)] h-screen;
-    color: whitesmoke;
+    @apply bg-[var(--bg-default)] h-screen;
+    color: #2b2b2b;
   }
 }
 
