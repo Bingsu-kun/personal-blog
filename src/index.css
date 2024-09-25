@@ -5,25 +5,100 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --bg-start: #D45424;
-    --bg-middle: #BB2A57;
-    --bg-end: #19105C;
-    --light-block-bg: #607d8b;
-    --dark-block-bg: #262f4d;
-    font-family: "Pretendard-Regular";
-  }
+	:root {
+		--bg-start: #d45424;
+		--bg-middle: #bb2a57;
+		--bg-end: #19105c;
+		--light-block-bg: #607d8b;
+		--dark-block-bg: #262f4d;
+		font-family: "Pretendard-Regular";
+		font-size: 16px;
+	}
 
-  body {
-    @apply bg-gradient-to-tr from-[var(--bg-start)] via-[var(--bg-middle)] to-[var(--bg-end)] h-screen;
-    color: whitesmoke;
-  }
+	body {
+		@apply bg-slate-900 h-screen;
+		word-break: keep-all;
+		overflow-x: hidden;
+		padding-bottom: 2rem;
+		letter-spacing: -0.3px;
+		color: whitesmoke;
+		-webkit-font-smoothing: antialiased;
+		margin: 0;
+	}
+
+	section {
+		padding: 0 2rem;
+	}
+
+	.resume-profile {
+		display: block;
+		max-width: 50%;
+		margin: 0.6em 0;
+		float: right;
+		border-radius: 5%;
+	}
+
+	.resume-container {
+		width: 100%;
+		max-width: 50rem;
+		margin: auto;
+	}
+
+	.resume-h1 {
+		font-family: "Pretendard-Black";
+		font-size: 4rem;
+		line-height: 1.1;
+		margin: 0.6em 0;
+	}
+
+	.resume-h2 {
+		font-family: "Pretendard-Bold";
+		font-size: 48px;
+		line-height: 1.1;
+	}
+
+	.resume-h3 {
+		font-family: "Pretendard-Bold";
+		font-size: 32px;
+		line-height: 1.1;
+	}
+
+	.resume-h4 {
+		font-family: "Pretendard-Bold";
+		font-size: 20px;
+		line-height: 1.1;
+	}
+
+	.resume-period-dot {
+		color: skyblue;
+	}
+
+	.resume-introduce {
+		font-size: 2rem;
+		line-height: 1.4;
+	}
 }
 
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Pretendard-Black";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+		format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Pretendard-Bold";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+		format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Pretendard-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
 }
