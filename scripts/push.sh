@@ -2,11 +2,11 @@
 
 echo "Github Page CI Action start"
 BUILD_DIRECTORY="dist"
-DESTINATION_GITHUB_USERNAME="Bingsu-kun"
-DESTINATION_REPOSITORY_NAME="bingsu-kun.github.io"
+DESTINATION_GITHUB_USERNAME="isaac-jh"
+DESTINATION_REPOSITORY_NAME="isaac-jh.github.io"
 USER_EMAIL="icetime963@gmail.com"
 USER_NAME="isaac"
-DESTINATION_REPOSITORY_USERNAME="Bingsu-kun"
+DESTINATION_REPOSITORY_USERNAME="isaac-jh"
 TARGET_BRANCH="master"
 COMMIT_MESSAGE="Updated by Github Action"
 
@@ -16,7 +16,7 @@ TARGET_DIRECTORY=""
 if [ -n "${API_TOKEN_GITHUB:=}" ]
 then
 	echo "[+] Using API_TOKEN_GITHUB"
-	GIT_CMD_REPOSITORY="https://Bingsu-kun:$API_TOKEN_GITHUB@github.com/Bingsu-kun/bingsu-kun.github.io.git"
+	GIT_CMD_REPOSITORY="https://isaac-jh:$API_TOKEN_GITHUB@github.com/isaac-jh/isaac-jh.github.io.git"
 else
 	echo "::error::API_TOKEN_GITHUB and SSH_DEPLOY_KEY are empty. Please fill one (recommended the SSH_DEPLOY_KEY)"
 	exit 1
@@ -38,7 +38,7 @@ git config --global user.name "$USER_NAME"
 
 git config --global http.version HTTP/1.1
 
-git clone https://github.com/Bingsu-kun/bingsu-kun.github.io.git "$CLONE_DIR"
+git clone https://github.com/isaac-jh/isaac-jh.github.io.git "$CLONE_DIR"
 
 ls -la "$CLONE_DIR"
 
